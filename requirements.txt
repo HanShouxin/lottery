@@ -1,0 +1,25 @@
+# 依赖版本锁定 —— 全部为本项目实测通过的版本（Python 3.13.12 / Windows）
+#
+# 安装：
+#   pip install -r requirements.txt
+#
+# 只用 CPU 训练的话，建议先单独装 torch 的 CPU 版（约 200 MB，比 CUDA 版小很多）：
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+# 再执行 pip install -r requirements.txt —— 已经装好的 torch 不会重复下载。
+# 不装 CPU 版直接跑上面的命令，Windows 会拉到 CUDA 版本（约 2.5 GB）。
+
+# ---- 深度学习（_03_train_models）----
+torch==2.14.1
+numpy==2.5.3
+pandas==3.0.6
+matplotlib==3.11.2
+
+# ---- 数据爬取（_01_data/lottery_history.py）----
+requests==2.34.2
+curl_cffi==0.17.0
+beautifulsoup4==4.15.0
+lxml==6.1.3
+
+# ---- Web 前端（_05_web）----
+Flask==3.1.3
+streamlit==1.66.1
